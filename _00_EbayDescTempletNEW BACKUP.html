@@ -1,0 +1,2010 @@
+
+
+<!-- NOTE| html `doctype`, declaration. -->
+<!DOCTYPE html>
+
+<!-- NOTE| html `html`, element. -->
+<html>
+
+	<!-- NOTE| html `head`, element. -->
+	<head>
+
+		<!-- 
+
+			TODO|
+
+				| need to do this first, then figure out how to style the other shit... so it matches the resto fo the stlye, with everthing else.
+				v
+				#__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqA1__DIV__{ /*background-color: pink ;*/ } /* ! todo: this needs to be updated so that, the content is held in seperate boxes, colred seprate in shades of gray to seperate it from the background. */
+	
+			+ need to make the `quotes column` scroll.. so that if the quotes exceed the bound wrapper, they will not overlap or bleed into other wrapers.
+			+ need to make a simple format for the `suporte technolagies` section.
+			+ need to make a simple format for the `description + the shipping information` sections.
+			+ need to clean up the `edges` of the image used in the description so that it is cleaner.. since it is half the content on the page, the messy corners and edges are a little messy.
+			+ need to save the logo to a seperate file and find out what needs to be placed in the footer with the log, like the date and other company related stuff.
+
+		-->
+
+		<!-- NOTE| style `main`, css. -->
+		<style>
+
+
+			/* | */
+			/* v CSS-RESET| assign the defualt css properties here, to fix most of whatever browser quarks.. that needs to be addressed so it generates the same layout. */ 
+			html, body {
+
+				/* _INFO  reset the base style shit.. */
+				width: 100% ;
+				height: 100% ;
+				margin: 0 ;
+				padding: 0 ;
+				border: 0 ;
+
+				/* font shit.. */
+				font-family: Bahnschrift ;
+
+				/* _INFO  define again so it ist at 300ps resalution... */
+				line-height:  2.17px ; /*4.17px ;*/ /*16px ;*/
+				font-size:  2.17px ; /*4.17px ;*/ /*16px ;*/
+			}
+
+
+			/* | */
+			/* v COLOR-PALLET| the color pallet. */
+			@media  {/* ! _COLORSWATCH  define. <-START */
+				/*
+
+					// + NOTE  The BACKGROUND pallet swatches
+					_____________________________________
+					|           |           |           |
+					|  W1       |  W2       |  W3       |
+					|  #e2e2e2  |  #ababab  |  #777777  |
+					|           |           |           |
+					|-----------|-----------|-----------|
+					|           |           |           |
+					|  B1       |  B2       |  B3       |
+					|  #1b1b1b  |  #303030  |  #070707  |
+					|           |           |           |
+					|-----------|-----------|-----------|
+					|           |           |           |
+					|  C1       |  C2       |  C3       |
+					|  #dd0000  |  #bc0000  |  #8c0000  |
+					|           |           |           |
+					|___________|___________|___________|
+
+					// + NOTE  the font element tag
+					<font face="Verdana">RAM</font>
+					font-face: Bahnschrift ;
+
+				*/
+
+					/* > WHITE: `font-color`, pallet swatches. */
+					.__CSSswatch_W1f__{ color: #e2e2e2 ; }
+					.__CSSswatch_W2f__{ color: #ababab ; }
+					.__CSSswatch_W3f__{ color: #777777 ; }
+
+					/* > BLACK: `font-color`, pallet swatches. */
+					.__CSSswatch_B1f__{ color: #1b1b1b ; }
+					.__CSSswatch_B2f__{ color: #303030 ; }
+					.__CSSswatch_B3f__{ color: #070707 ; }
+
+					/* > COLOR: `font-color`, pallet swatches. */
+					.__CSSswatch_C1f__{ color: #dd0000 ; }
+					.__CSSswatch_C2f__{ color: #bc0000 ; }
+					.__CSSswatch_C3f__{ color: #8c0000 ; }
+
+			}/* ! _COLORSWATCH  define. <-START */
+			/* ! NOTE| color pallet.. use these classes to COLOR the text. */
+
+			.__CSSswatch_C3textoutline__{
+
+				/*
+				-webkit-text-fill-color: white ;
+				-webkit-text-stroke-width: 0.5px ;
+				-webkit-text-stroke-color: black ;
+				*/
+
+				/*
+				text-shadow: -1px -1px 0 #000
+						   ,  1px -1px 0 #000
+						   , -1px  1px 0 #000
+						   ,  1px  1px 0 #000
+				           ;
+				*/
+
+				text-shadow: 0.5px 0.5px 0 #aaa
+				           ;
+
+
+				text-shadow: 0.5px 0.5px 0 #444
+				           ;
+
+
+				text-shadow: 3px 3px 0 #000
+				           ;
+
+
+				text-shadow: 0.08em 0.08em 0 #000
+				           ;
+
+
+			}
+
+
+			/* | */
+			/* v COLOR-PALLET| the color pallet. */
+			@media  {/* ! _COLORSWATCH  define. <-START */
+				/*
+
+					// + NOTE  The FONTCOLOR pallet swatches
+
+				*/
+
+					/* > WHITE: `background`, pallet swatches. */
+					.__CSSswatch_W1bg__{ background-color: #e2e2e2 ; }
+					.__CSSswatch_W2bg__{ background-color: #ababab ; }
+					.__CSSswatch_W3bg__{ background-color: #777777 ; }
+
+					/* > BLACK: `background`, pallet swatches. */
+					.__CSSswatch_B1bg__{ background-color: #1b1b1b ; }
+					.__CSSswatch_B2bg__{ background-color: #303030 ; }
+					.__CSSswatch_B3bg__{ background-color: #070707 ; }
+
+					/* > COLOR: `background`, pallet swatches. */
+					.__CSSswatch_C1bg__{ background-color: #dd0000 ; }
+					.__CSSswatch_C2bg__{ background-color: #bc0000 ; }
+					.__CSSswatch_C3bg__{ background-color: #8c0000 ; }
+
+			}/* ! _COLORSWATCH  define. <-START */
+
+			/* | */
+			/* v COLOR-PALLET| the color pallet. */
+			@media  {/* ! _COLORSWATCH  define. <-START */
+				/*
+
+					// + NOTE  The BORDERCOLOR pallet swatches
+
+					// v to set the ful border colors.. need to set the non primary border color, if the `primary border color is set` then it cant be reset to a diffferant value later.
+					a. -> border-top-color: red ;
+					a. -> border-right-color: red ;
+					a. -> border-bottom-color: red ;
+					a. -> border-left-color: red ;
+					b. ->  border-left: 20em solid transparent ;
+
+				*/
+
+				/* > WHITE: `background`, pallet swatches. */
+				.__CSSswatch_W1border__{ /* !old: border-color: #e2e2e2 ; */ border-top-color:#e2e2e2;  border-right-color:#e2e2e2;  border-bottom-color:#e2e2e2;  border-left-color:#e2e2e2; }
+				.__CSSswatch_W2border__{ /* !old: border-color: #ababab ; */ border-top-color:#ababab;  border-right-color:#ababab;  border-bottom-color:#ababab;  border-left-color:#ababab; }
+				.__CSSswatch_W3border__{ /* !old: border-color: #777777 ; */ border-top-color:#777777;  border-right-color:#777777;  border-bottom-color:#777777;  border-left-color:#777777; }
+
+				/* > BLACK: `background`, pallet swatches. */
+				.__CSSswatch_B1border__{ /* !old: border-color: #1b1b1b ; */ border-top-color:#1b1b1b;  border-right-color:#1b1b1b;  border-bottom-color:#1b1b1b;  border-left-color:#1b1b1b; }
+				.__CSSswatch_B2border__{ /* !old: border-color: #303030 ; */ border-top-color:#303030;  border-right-color:#303030;  border-bottom-color:#303030;  border-left-color:#303030; }
+				.__CSSswatch_B3border__{ /* !old: border-color: #070707 ; */ border-top-color:#070707;  border-right-color:#070707;  border-bottom-color:#070707;  border-left-color:#070707; }
+				/* ... border: 0.24em solid blue ;
+				*/
+
+				/* > COLOR: `background`, pallet swatches. */
+				.__CSSswatch_C1border__{ /* !old: border-color: #dd0000 ; */ border-top-color:#dd0000;  border-right-color:#dd0000;  border-bottom-color:#dd0000;  border-left-color:#dd0000; }
+				.__CSSswatch_C2border__{ /* !old: border-color: #bc0000 ; */ border-top-color:#bc0000;  border-right-color:#bc0000;  border-bottom-color:#bc0000;  border-left-color:#bc0000; }
+				.__CSSswatch_C3border__{ /* !old: border-color: #8c0000 ; */ border-top-color:#8c0000;  border-right-color:#8c0000;  border-bottom-color:#8c0000;  border-left-color:#8c0000; }
+
+			}/* ! _COLORSWATCH  define. <-START */
+
+			/*
+			! COLORSWATCHES:
+
+				+ FONT-COLOR
+				1.__CSSswatch_W1f__ | 2.__CSSswatch_W2f__ | 3.__CSSswatch_W3f__
+				1.__CSSswatch_B1f__ | 2.__CSSswatch_B2f__ | 3.__CSSswatch_B3f__
+				1.__CSSswatch_C1f__ | 2.__CSSswatch_C2f__ | 3.__CSSswatch_C3f__
+
+				+ BACKGROUND
+				1.__CSSswatch_W1bg__ | 2.__CSSswatch_W2bg__ | 3.__CSSswatch_W3bg__
+				1.__CSSswatch_B1bg__ | 2.__CSSswatch_B2bg__ | 3.__CSSswatch_B3bg__
+				1.__CSSswatch_C1bg__ | 2.__CSSswatch_C2bg__ | 3.__CSSswatch_C3bg__
+
+			*/
+
+
+			/* | */
+			/* v HEADER-SIZE| the header sizes. */
+			@media  {/* ! _HEADERSIZE  define. <-START */
+
+
+					/* > HEADERSIZE: header sizes. */
+					/* v shared: this is the shared shit, define the shit that is the same between shit here at top, the nspecfiically deine the shot if differant later.*/
+
+					/* + SHARED  the main catagory header shit. <-START */
+					@media  {
+						      /* v the GLOBAL, shit.. this is not depenedednt onl the catg.. is used to set the slignment and sit, when it needs to be applied to the the outer element.. to be applied. */
+							  .__CSSfont__GLOBALalign_L__{ text-align: left ; }
+							  .__CSSfont__GLOBALalign_R__{ text-align: right ; }
+
+							  /* v the HEADER catagory specific shit.. gruop the `alike` shit, with the common style properties to save on fuckig typing, and localize the main measurements to a central location, being HERE. */
+							  .__CSSfont__H1a__
+							, .__CSSfont__H1b__
+							, .__CSSfont__H1c__ , .__CSSfont__HXc__
+							, .__CSSfont__H1d__
+							, .__CSSfont__H1e__
+							, .__CSSfont__H1moduleQUOTEv1__
+							  { /*#HEAD*/line-height: 1em ; font-size: 14em ; letter-spacing: 0.025em ;  font-weight: 600 ;
+							  }
+							  .__CSSfont__H2a__
+							, .__CSSfont__H2c__
+							, .__CSSfont__H2d__
+							, .__CSSfont__H2e__
+							, .__CSSfont__H2moduleQUOTEv1__
+							  { /*#THETITLE*/line-height: 0.8em ; font-size: 14em ; letter-spacing: 0.020em ;  font-weight: 600 ;
+							  }
+							  .__CSSfont__H3c__
+							, .__CSSfont__H3d__
+							, .__CSSfont__H3e__
+							, .__CSSfont__H3moduleQUOTEv1__
+							  { /*#SUBTITLE*/line-height: 0.8em ; font-size: 14em ; letter-spacing: 0.020em ;  font-weight: 600 ;
+							  }
+
+							  /* + the LIST<NEW> NAME of a thing, BEFORE the list. ...__CSSfont__T1d__ */
+							  .__CSSfont__LN1d__
+							, .__CSSfont__LN1e__
+							, .__CSSfont__LN1moduleQUOTEv1__
+							  { /*#LIST-NAME*/ line-height: /*1.15em*//*0.85em*/1em ; font-size: 14em ;   /*display: block ; float: none ; position: static ; margin-top: 14em ; background: red ; *//* !oldcode| position: relative ; top: -0.25em ; */
+							  }
+
+							  /* + the LIST<ITEM> of a thing, BETWEEN the list. ...__CSSfont__T1d__ */
+							  .__CSSfont__LI1d__
+							, .__CSSfont__LI1e__
+							, .__CSSfont__LI1moduleQUOTEv1__
+							  { /*#LIST-NAME*/ line-height: /*1.15em*//*0.85em*/1em ; font-size: 10em ;   /*display: block ; float: none ; position: static ; margin-top: 14em ; background: red ; *//* !oldcode| position: relative ; top: -0.25em ; */
+							  }
+
+							  /* v the BULLET of the shit... basic bullet stlye properties, that may be shared. */
+							/* . here later.. `__CSSfont__B1d__ and __CSSfont__B2d__` <-- */
+
+							  /* v the BULLET of the shit... basic bullet stlye properties, that may be shared. */
+							/* . here later.. `__CSSfont__W1e__` <-- */
+
+							  /* v the PARAGRAPH of the shit... basic paragraf stlye properties, that may be shared. */
+							  .__CSSfont__T1b__
+							, .__CSSfont__T1c__
+							, .__CSSfont__TXc__
+							  { /*#PARAGRAPH*/line-height: 1.10em ; font-size: 10em ;  letter-spacing: 0.025em ; font-weight: 400 ;
+							  }
+
+							  /* + the ITEM NAME of a thing, in a list. */
+							  .__CSSfont__T1d__
+							, .__CSSfont__T1e__
+							, .__CSSfont__T1moduleQUOTEv1__
+							  { /*#LIST-NAME*/line-height: /*1.15em*//*0.85em*/1.15em ; font-size: 14em ; letter-spacing: 0.025em ; font-weight: 600 ; position: relative ; top: /*-0.25em*/-0.1em ; /* !oldcode| position: relative ; top: -0.25em ; */
+											  line-height: /*1.15em*//*0.85em*/1.00em ; font-size: 14em ; letter-spacing: 0.025em ; font-weight: 600 ; position: relative ; top: /*-0.25em*/-0.0em ;
+							  }
+							  .__CSSfont__T2d__
+							, .__CSSfont__T2e__
+							, .__CSSfont__T2moduleQUOTEv1__
+							  { /*#LIST-DESC*/line-height: 1.0em ; font-size: 14em ; letter-spacing: 0.020em ; font-weight: 600 ; position: relative ; top: /*-0.25em*/-0.2em ; /* !oldcode| position: relative ; top: -0.25em ; */
+											  line-height: 1.3em ; font-size: 14em ; letter-spacing: 0.020em ; font-weight: 600 ; position: relative ; top: /*-0.25em*/-0.1em ;
+							  }
+
+							  /* + the ITEM VALUE of a thing, in a list. */
+							  .__CSSfont__T3d__
+							, .__CSSfont__T3e__
+							, .__CSSfont__T3moduleQUOTEv1__
+							  { /*#LIST-ATTR*/line-height: 1.2em ; font-size: 10em ; letter-spacing: 0.020em ; font-weight: 600 ;
+							  }
+							  .__CSSfont__T4d__
+							, .__CSSfont__T4moduleQUOTEv1__
+							  { /*#VALUE*/line-height: 1.2em ; font-size: 10em ; letter-spacing: 0.020em ; font-weight: 600 ;
+							  }
+
+
+					}
+
+
+					/* v the `a` font templet shit. !FINISHUP| use this to tag, the page HEDER.. the top page header, only 1 thing should be taged, because thethere isonly one webpage, hence 1 header.
+				         note| this just needs a diagram to explain its setup, and then need to make sure that it is ONLY used on the single page header, and not with other element in the page.
+				         also.. need to merge its classes with the shit above, so that it is easier to identify that it is a header, and then need to tweek the size so that it is larger then the other normal headers on the page.
+
+						.c| **note: That `inside view, under the side-pane..`, the diagram on pg2. in the PDF.
+						_________________________________________________________________________
+						|<00.>             | <11.>                                              |  <-this is the main: page header.
+						|                    (H1a #MAINHEADER)                                  |  <-this is the sub: page header
+						|                  | (T1a #SUBHEAD)                                     |
+						|_ _ _ _ _ _ _ _ _  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ |
+						|__________________|____________________________________________________|  <-the page header, it has no body text, or shit after it.
+						- H1a #MAINHEADER
+						- T1a #SUBHEAD
+
+					*/
+					.__CSSfont__H1a__{ /* . EXTEND DEFINE HERE */ font-size: 39em ; } /* _NOTE  oldname: `__CSSatr__TheEbayDescHEAD__TITLE__TEXTSTYLE__H6__`. */
+					.__CSSfont__H2a__{ /* . EXTEND DEFINE HERE */ font-size: 19em ; } /* _NOTE  oldname: `__CSSatr__TheEbayDescHEAD__TITLE__TEXTSTYLE__H5__`. */
+
+
+					/* v the `b` font templet shit. !FINISHUP| use this to tag the shit that has a single header, then  a single basic plain text body paragraph.
+					     note| <!-- here is the, descripotion block... need to tag it with a differant heade tage catagory... that make the header red. ..old: __CSSfont__H1b__ <-> __CSSfont__H1c__ -->
+
+
+						v need to use these properties for now.. fany up the basic paragraph style templet later if needed.
+						__CSSfont__H1c__
+						__CSSfont__T1c__
+
+					*/
+					.__CSSfont__H1b__{ /* . EXTEND DEFINE HERE */ } /* ! old| line-height: 1em ; font-size: 14em ; }*/
+					.__CSSfont__T1b__{ /* . EXTEND DEFINE HERE */ } /* ! old| line-height: 1em ; font-size: 10em ; }*/
+
+
+					/* v the `c` font templet shit. **this still needs to be setup!!  **this is the basic header, with hte folloing text format.. is the colored header with the plain text style for the body things. need to find shit tagged with this ater, to know what still needs to be replaced.
+
+						.c| **note: That `inside view, under the side-pane..`, the diagram on pg2. in the PDF.
+						_________________________________________________________________________
+						|<00.>             | <11.>                                              |  <-this is the header.
+						|                    (H1c #MAINHEADER)                                  |
+						|                  | (H2c #MAINTITLE) (H3c #SUBTITLE)                   |
+						|_ _ _ _ _ _ _ _ _  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ |
+						|<01.>             | <12.>                                              |  -this is the body paragraph.
+						|                    (T1c #PARAGRAPH-TEXT)                              |
+						|__________________|____________________________________________________|
+						- H1c #MAINHEADER
+						- H2c #MAINTITLE
+						- H3c #SUBTITLE
+						- T1c #PARAGRAPH-TEXT
+
+						// v this is how shit is setup for the page 2 shit...
+						..    <font class="__CSSswatch_C3f__"></font>
+						..<br><!-- o BULLET --><div class="__CSSfont__B1d__"><div class="circleBase __CSSfont__B2d__ __CSSswatch_C3bg__ __CSSswatch_C3f__ __CSSswatch_B1border__"></div></div>
+						..	<font class="__CSSfont__T1d__ __CSSswatch_B2f__">PUBG</font>
+						..<br><font class="__CSSfont__T2d__ __CSSswatch_W3f__">Playerunknown’s battlegrounds</font>
+						..<br><font class="__CSSfont__T3d__ __CSSswatch_W3f__">Framerate option: </font><font class="__CSSfont__T4d__ __CSSswatch_W2f__">unlocked</font>
+						..<br><font class="__CSSfont__T3d__ __CSSswatch_W3f__">Graphics preset: </font><font class="__CSSfont__T4d__ __CSSswatch_W2f__">ultra</font>
+						..<br><font class="__CSSfont__T3d__ __CSSswatch_W3f__">FPS: </font><font class="__CSSfont__T4d__ __CSSswatch_W2f__">[80+]</font>
+						..<br>
+
+					*/
+					.__CSSfont__H1c__{ /* . EXTEND DEFINE HERE */ }
+					.__CSSfont__HXc__{  font-size: 35em ; }
+
+					.__CSSfont__H2c__{ /* . EXTEND DEFINE HERE */ }
+					.__CSSfont__H3c__{ /* . EXTEND DEFINE HERE */ }
+
+					.__CSSfont__T1c__{ /* . EXTEND DEFINE HERE */ }
+					.__CSSfont__TXc__{ /* . EXTEND DEFINE HERE */  line-height: 1.10em ; font-size: 16em ;  letter-spacing: 0.025em ; font-weight: 400 ; }
+
+					/*
+					, .__CSSfont__TXc__
+					  { /x#PARAGRAPHx/line-height: 1.10em ; font-size: 10em ;  letter-spacing: 0.025em ; font-weight: 400 ;
+					  }
+						// v font sizes..
+						x font-size: 59em ; <- the quote `module header`
+
+						o font-size: 39em ; <- the page `main header`
+						o font-size: 19em ; <- the page `sub header`
+
+						o font-size: 14em ; <- the modual `main header`
+						o font-size: 10em ; <- the text `paragraph`
+
+					  */
+
+
+
+					/* v the `d` font templet shit. **this is DONE. it could be tweeked, the line heigh t spacing later... 
+
+						.d| **note: That `REALTIME GAMEPLAY FPS| RESU..`, the diagram on pg3. in the PDF.
+						_________________________________________________________________________
+						|<00.>             | <11.>                                              |
+						|                  | (H1d #HEAD)                                        |  <-this is the header.
+						|                    (H2d #THETITLE) (H3d #SUBTITLE) (H4d #SUPERSCRIPT) |
+						|_ _ _ _ _ _ _ _ _ |_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ |
+						|<01.>             | <12.>                                              |
+						|(B1d #LIST-BULLET)  (T1d #LIST-NAME)                                   |  <- this a list item, it has a header, then a sub-header name, thne the rest are following attributes follows by values which are all for mated to the same style.
+						|                  | (T2d #LIST-DESC)                                   |
+						|                    (T3d #LIST-ATTR) (T4d #VALUE)                      |
+						|__________________|____________________________________________________|
+						- H1d #HEAD
+						- H2d #THETITLE
+						- H3d #SUBTITLE
+						- H4d #SUPERSCRIPT
+						- B1d #LIST-BULLET
+						- T1d #LIST-NAME
+						- T2d #LIST-DESC
+						- T3d #LIST-ATTR
+						- T4d #VALUE
+
+					*/
+					.__CSSfont__H1d__{ /* . EXTEND DEFINE HERE */ } /*#HEAD*/
+					.__CSSfont__H2d__{ /* . EXTEND DEFINE HERE */ } /*#THETITLE*/
+					.__CSSfont__H3d__{ /* . EXTEND DEFINE HERE */ } /*#SUBTITLE*/
+					.__CSSfont__H4d__{ line-height: 1em ; font-size:  7em ; letter-spacing: /*0.025em*/0.0083em ;  font-weight: 600 ; position: relative ; top: -0.50em ; } /*#SUPERSCRIPT*/
+
+					.__CSSfont__B1d__{ /*#LIST-BULLET| outer wrapper. */
+						width: 14em ;
+						height: 14em ;
+						margin-top: /*-14em*/-14em ;
+					}
+					.__CSSfont__B2d__{ /*#LIST-BULLET| inner bullet. */
+						width: 6em ; 
+						height: 6em ;
+						border-style: solid ; border-top-width: 3em ; border-right-width: 3em ; border-bottom-width: 3em ; border-left-width: 3em ;
+						margin-top: -14em ;
+						top: 14em ; top: 14em ;
+						margin-left: /*-14em*/-16em ; /*-1.8em ;*/ /* <= (height) + (border width * 2) + (0.2 **to pad it, so it does not touch the edge) */
+						position: relative ;
+					}
+
+					.__CSSfont__T1d__{ /* . EXTEND DEFINE HERE */  } /*#LIST-NAME*/
+					.__CSSfont__T2d__{ /* . EXTEND DEFINE HERE */  } /*#LIST-DESC*/
+
+					.__CSSfont__T3d__{ /* . EXTEND DEFINE HERE */  } /*#LIST-ATTR*/
+					.__CSSfont__T4d__{ /* . EXTEND DEFINE HERE */  } /*#VALUE*/
+
+
+					/* v the `e` font templet shit. **this is DONE. it could be tweeked, the line heigh t spacing later... 
+
+						.d| **note: That `REALTIME GAMEPLAY FPS| RESU..`, the diagram on pg3. in the PDF.
+						_________________________________________________________________________
+						|<00.>             | <11.>                                              |
+						|                    (H1e #HEAD)                                        |  <-this is the header.
+						|                  | (H2e #THETITLE) (H3e #SUBTITLE)                    |
+						|_ _ _ _ _ _ _ _ _  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ |
+						|<01.>             | <12.>                                              |
+						|(W1e #WRAP-BOX)     (T1e #LIST-NAME)(T2e #LIST-DESC)                   |  <- the item header
+						|                  | (T3e #PARAGRAPH-TEXT)                              |  <- the item paragraph
+						|__________________ ____________________________________________________|
+						- H1e #HEAD
+						- H2e #THETITLE
+						- H3e #SUBTITLE
+						- W1e #WRAP-BOX
+						- T1e #LIST-NAME
+						- T2e #LIST-DESC
+						- T3e #PARAGRAPH-TEXT
+
+					*/
+					.__CSSfont__H1e__{ /* . EXTEND DEFINE HERE */ } /*#HEAD*/
+					.__CSSfont__H2e__{ /* . EXTEND DEFINE HERE */ } /*#THETITLE*/
+					.__CSSfont__H3e__{ /* . EXTEND DEFINE HERE */ } /*#SUBTITLE*/
+
+					.__CSSfont__W1e__{ /*#LIST-BULLET| outer wrapper. */
+						width: 100% ;
+						overflow: hidden ;
+						float: none ;
+						position: relative ;
+					}
+					.__CSSfont__W2e__{
+						max-width: 100% ;
+						padding: 7em /*18*/21em 7em 14em ;
+						overflow: hidden ;
+						float: left ;
+					}
+					.__CSSfont__W3e__{
+						overflow: auto ; overflow-x: auto ; overflow-y: visible ;
+						white-space: nowrap ;
+						float: none ;
+						display: block ;
+					}
+
+					.__CSSfont__T1e__{ /* . EXTEND DEFINE HERE */  /*font-size: 14em ;*/ top: /*-0.25em*/-0.1em ;  } /*#LIST-NAME*/
+					.__CSSfont__T2e__{ /* . EXTEND DEFINE HERE */  /*font-size: 14em ;*/ top: /*-0.25em*/-0.1em ; /*top: -0.1em ;*/ } /*#LIST-DESC*/
+
+					.__CSSfont__T3e__{ /* . EXTEND DEFINE HERE */  position: relative ;  font-weight: 400 ; /*  letter-spacing: 0.025em ; line-height: 1.3em ;*/ } /*#LIST-ATTR*/
+
+
+					/* v the `moduleQUOTEv1__` font templet shit. **this is DONE. it could be tweeked, the line heigh t spacing later... 
+
+						.d| **note: That `REALTIME GAMEPLAY FPS| RESU..`, the diagram on pg3. in the PDF.
+						_________________________________________________________________________
+						|<00.>             | <11.>                                              |
+						|                    (H1moduleQUOTEv1__ #HEAD)                                        |  <-this is the header.
+						|                  | (H2moduleQUOTEv1__ #THETITLE) (H3moduleQUOTEv1__ #SUBTITLE)                    |
+						|_ _ _ _ _ _ _ _ _  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ |
+						|<01.>             | <12.>                                              |
+						|(W1moduleQUOTEv1__ #WRAP-BOX)     (T1moduleQUOTEv1__ #LIST-NAME)(T2moduleQUOTEv1__ #LIST-DESC)                   |  <- the item header
+						|                  | (T3moduleQUOTEv1__ #PARAGRAPH-TEXT)                              |  <- the item paragraph
+						|__________________ ____________________________________________________|
+						- H1moduleQUOTEv1__ #HEAD
+						- H2moduleQUOTEv1__ #THETITLE
+						- H3moduleQUOTEv1__ #SUBTITLE
+						- W1moduleQUOTEv1__ #WRAP-BOX
+						- T1moduleQUOTEv1__ #LIST-NAME
+						- T2moduleQUOTEv1__ #LIST-DESC
+						- T3moduleQUOTEv1__ #PARAGRAPH-TEXT
+
+						// + diagram:
+						----------------------------- -Nvidia---  <--__CSSfont__T1moduleQUOTEv1__
+						|                                      |
+						|   Expect amazing performance         |  <--__CSSfont__T2moduleQUOTEv1__
+						|   at great value with Nvidia's gtx   |
+						|   1650 super GPU                     |
+						|                                      |
+						|   "The GeForce GTX 1650 SUPER is     |  <--__CSSfont__T3moduleQUOTEv1__
+						|   up to 50% faster than t...         |
+						|                                      |
+						|      https://www.nvidia.com/car...   |  <--__CSSfont__T4moduleQUOTEv1__
+						|      s/gtx-1650-super/               |
+						|                                      |
+						----------------------------------------
+
+						// v ...
+						o __CSSfont__W3moduleQUOTEv1__
+						o __CSSfont__W4moduleQUOTEv1__
+						o __CSSfont__W4moduleQUOTEv1__
+						o __CSSfont__W4moduleQUOTEv1__
+
+					*/
+					.__CSSfont__H1moduleQUOTEv1__{ /* . EXTEND DEFINE HERE */ } /*#HEAD*/
+					.__CSSfont__H2moduleQUOTEv1__{ /* . EXTEND DEFINE HERE */ } /*#THETITLE*/
+					.__CSSfont__H3moduleQUOTEv1__{ /* . EXTEND DEFINE HERE */ } /*#SUBTITLE*/
+
+					.__CSSfont__W1moduleQUOTEv1__{ /*#LIST-BULLET| outer wrapper. */
+						background: purple ;
+						background: transparent ;
+						width: 100% ;
+						/* overflow: hidden ; */
+						float: none ;
+						position: relative ;
+						margin: -20em 0 0 0 ;
+						margin: -20em 0 0 0 ;
+						/*margin: -20em 0 0 0 ;*//* !note: this will offset it, and put it back to where it is.. so that the overflow will be visible. */
+					}
+					.__CSSfont__W2moduleQUOTEv1__{
+						/*background: orange ; */
+						max-width: 100% ;
+						padding: 0 ; /* !old| 7em 21em 7em 14em ; */
+						float: left ;
+						margin: 20em 0 0 0 ; margin: 20em 0 20em 0 ;
+						padding: 0 0 0.1em 0 ; /* !note: this expands the box, a TINY bit.. so that the corner triable, is covered up so there is not invisable line where the element s touch.*/
+					}
+					.__CSSfont__W3moduleQUOTEv1__{/* !note: for a header, and when the header does NOT fit needs to scroll on the x-axis.. so the full thing can be viewed. */
+						/*margin: 20em 0 0 0 ;*//* !note: this will offset it, and put it back to where it is.. so that the overflow will be visible. */
+						/* ... background: green ; */
+						/* !oldcode: keep if needed!! to kay it use a scrollbar if the header is too long
+						overflow: auto ; overflow-x: auto ; overflow-y: visible ;
+						white-space: nowrap ;
+						float: none ;
+						display: block ;
+						*/
+						width: 100% ;
+						position: relative ;
+						float: none ;
+						display: inline-block ;
+						overflow: visible ;
+						white-space: wrap ;
+						position: relative ;
+						top: -20em ; margin: 0 0 25em -10em ;
+						top: -20em ; margin: 0 0 25em -10em ;
+					}
+					.__CSSfont__W4moduleQUOTEv1__{/* !note: for the body, it will expand to hold whatever th fuck is in it. */
+						float: none ;
+						position: relative ;
+						top: -40em ;
+						margin: 0 30em 10em 20em ;
+					}
+					.__CSSfont__W5moduleQUOTEv1__{
+						float: none ;
+						position: relative ;
+						top: -40em ;
+						margin: 0 30em 5em 20em ;
+					}
+					.__CSSfont__W6moduleQUOTEv1__{
+						float: none ;
+						position: relative ;
+						top: -40em ;
+						margin: 0 30em -20em 34em ;
+					}
+					.__CSSfont__W7moduleQUOTEv1__{
+						float: none ;
+						position: relative ;
+						top: 20em ;
+						margin: -40em 30em 0em 34em ;
+						margin: -40em 30em 0em 34em ;
+						background: blue ;
+					}
+					.__CSSfont__T1moduleQUOTEv1__{ /* . EXTEND DEFINE HERE */  /*#WUOTE-HEAD*/
+						font-size:  /*60em*/59em ; font-size: 39em ;
+					}
+					.__CSSfont__T2moduleQUOTEv1__{ /* . EXTEND DEFINE HERE */  /*#QUOTE-SENTANCE*/
+						font-size:  /*14em*/19em ; font-size: 14em ;
+					}
+					.__CSSfont__T3moduleQUOTEv1__{ /* . EXTEND DEFINE HERE */  /*#QUOTE-REFERANCETEXT*/
+						font-size:  /*12em*/10em ; font-size:  12em ;
+						position: relative ;
+					}
+					.__CSSfont__T4moduleQUOTEv1__{ /* . EXTEND DEFINE HERE */  /*#QUOTE-REFERANCELINK*/
+						font-size:  /*10em*/8em ; font-size:  10em ;
+						position: relative ;
+					}
+
+
+					/* | */
+					/* v summery: these are the font sizes that are currenlt in use.
+					     and put other notes, and shit here too.
+
+						// v font sizes..
+						x font-size: 59em ; <- the quote `module header`
+
+						o font-size: 39em ; <- the page `main header`
+						o font-size: 19em ; <- the page `sub header`
+
+						o font-size: 14em ; <- the modual `main header`
+						o font-size: 10em ; <- the text `paragraph`
+
+						// v todo..
+						+ note: Need to split the shit up into mulriple pageses.. it a fucking mess.
+
+					*/
+
+					/* ..ect. */
+
+
+			}/* ! _HEADERSIZE  define. <-START */
+
+
+
+			/* | */
+			/* v MEDIA-QUERY| notes and shit.
+
+				> Media query target ranges, in pixels.
+				  a. Tiny:   0px
+				  a. Mobile: 400px
+				  b. Phablet: 550px
+				  c. Tablet: 750px
+				  d. DesktopLQ: 1000px
+				  e. DesktopHD: 1200px
+
+				> eghh...
+				  + line-height: 0.61px ;
+				  + line-height: 0.84px ;
+				  + line-height: 1.14px ;
+				  + line-height: 1.53px ;
+				  + line-height: 1.83px ;
+				  + line-height: 1.83px ;
+
+			*/
+
+			/* ! MEDIA-QUERY| Mobile first queries */
+			@media screen and (min-width: 0px) {/* ! _MEDIAQUERY  Tiny.  <-START */
+
+				body {
+					background-color: purple ; /*#FA0 ;*/
+					line-height: 0.61px ;
+					font-size: 0.61px ;
+				}
+
+			}/* ! _MEDIAQUERY  Tiny.  <-END  */
+
+			/* ! MEDIA-QUERY| Larger than mobile */
+			@media (min-width: 400px) {/* ! _MEDIAQUERY  Mobile.  <-START */
+
+				body {
+					background-color: #FA3 ;
+					line-height: 0.61px ;
+					font-size: 0.61px ;
+				}
+
+			}/* ! _MEDIAQUERY  Mobile.  <-END  */
+
+			/* ! MEDIA-QUERY| Larger than phablet */
+			@media (min-width: 550px) {/* ! _MEDIAQUERY  Phablet.  <-START */
+
+				body {
+					background-color: #FA6 ;
+					line-height: 0.84px ;
+					font-size: 0.84px ;
+				}
+
+			}/* ! _MEDIAQUERY  Phablet.  <-END  */
+
+			/* ! MEDIA-QUERY| Larger than tablet */
+			@media (min-width: 750px) {/* ! _MEDIAQUERY  Tablet.  <-START */
+
+				body {
+					background-color: #FA9 ;
+					line-height: 1.14px ;
+					font-size: 1.14px ;
+				}
+
+			}/* ! _MEDIAQUERY  Tablet.  <-END  */
+
+			/* ! MEDIA-QUERY| Larger than desktop */
+			@media (min-width: 1000px) {/* ! _MEDIAQUERY  DesktopLQ.  <-START */
+
+				body {
+					background-color: #FAC ;
+					line-height: 1.53px ;
+					font-size: 1.53px ;
+				}
+
+			}/* ! _MEDIAQUERY  DesktopLQ.  <-END  */
+
+			/* ! MEDIA-QUERY| Larger than Desktop HD */
+			@media (min-width: 1200px) {/* ! _MEDIAQUERY  DesktopHD.  <-START */
+
+				body {
+					background-color: #FAF ;
+					line-height: 1.83px ;
+					font-size: 1.83px ;
+				}
+
+			}/* ! _MEDIAQUERY  DesktopHD.  <-END  */
+
+			/* ! MEDIA-QUERY| Larger than Desktop HD */
+			@media (min-width: 1600px) {/* ! _MEDIAQUERY  DesktopHD.  <-START */ /*.. moniter(1600 x 900) */
+
+				body {
+					background-color: purple ; /*#FAF ;*/
+					line-height: 2.45px ;
+					font-size: 2.45px ;
+				}
+
+			}/* ! _MEDIAQUERY  DesktopHD.  <-END  */
+
+
+			/* | */
+			/* v HTML-WRAP| here! use the hmtl body element, to hold the inner shit.. define its properties here. */ 
+			#__CSSatr__TheEbayDescHTML__BODY__MAINWRAP__DIV__{
+				width: 100% ;
+				height: 100% ;
+				/*background-color: green ;*/
+			}
+
+
+			/* ! NOTE| colums.. */
+			.__CSSatr__TheEbayDescMAINWRAP__BLOCK__COL_T2_S0__DIV__{/* ! INFO: block column `total 2, cnt span 1`. */
+				background-color: orange ;
+				width: 100% ;
+				height: 0% ;
+				position: relative ;
+				clear: both ;
+			}
+			.__CSSatr__TheEbayDescMAINWRAP__BLOCK__COL_T2_S1__DIV__{/* ! INFO: block column `total 2, cnt span 1`. */
+				background-color: orange ;
+				width: 100% ;
+				height: 50% ;
+				position: relative ;
+				clear: both ;
+			}
+			.__CSSatr__TheEbayDescMAINWRAP__BLOCK__COL_T2_S2__DIV__{/* ! INFO: block column `total 2, cnt span 2`. */
+				background-color: orange ;
+				width: 100% ;
+				height: 100% ;
+				position: relative ;
+				clear: both ;
+			}
+
+			/* + NOTE| rows.. */
+			@media  /* ! _PAGEROWS  define. <-START */
+					{ .__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T02_S01__DIV__
+			        , .__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T02_S02__DIV__
+					  {  /*background-color: pink ;*/
+					     float: left ;
+					     width: 0 ;
+					     /*min-height: 1% ;*/
+					     overflow: visible ;
+					  }
+
+				/* x02: total span. `!note: percentages.. 100% / 2 => (50%)` */
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T02_S01__DIV__{ width:  50% ; }/* ! INFO: block column `total 2, cnt span 1`. */
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T02_S02__DIV__{ width: 100% ; }/* ! INFO: block column `total 2, cnt span 2`. */
+
+				/* --> total span. `!note: colors.. for visual debuging.` */
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T02_S01__DIV__{ background-color: #9F0 ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T02_S02__DIV__{ background-color: #9F3 ; }
+
+			}/* ! _PAGEROWS  define. <-START */
+
+			@media  /* ! _PAGEROWS  define. <-START */
+					{ .__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__
+					, .__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S02__DIV__
+					, .__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S03__DIV__
+					, .__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S04__DIV__
+					, .__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S05__DIV__
+					, .__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S06__DIV__
+					, .__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S07__DIV__
+					, .__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S08__DIV__
+					  {  /*background-color: pink ;*/
+					     float: left ;
+					     width: 0 ;
+					     min-height: 1px ; /*min-height: 1% ;*/
+					     overflow: visible ;
+					  }
+
+				/* x08: total span. `!note: percentages.. 100% / 8 => (12.5%)` */
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__{ width:  12.5% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S02__DIV__{ width:    25% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S03__DIV__{ width:  37.5% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S04__DIV__{ width:    50% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S05__DIV__{ width:  62.5% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S06__DIV__{ width:    75% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S07__DIV__{ width:  87.5% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S08__DIV__{ width:   100% ; }
+
+				/* --> total span. `!note: colors.. for visual debuging.` */
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__{ /*background-color: #FF0 ;*/ }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S02__DIV__{ /*background-color: #FF3 ;*/ }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S03__DIV__{ /*background-color: #FF6 ;*/ }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S04__DIV__{ /*background-color: #FF9 ;*/ }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S05__DIV__{ /*background-color: #FFC ;*/ }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S06__DIV__{ /*background-color: #FFF ;*/ }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S07__DIV__{ /*background-color: #FF0 ;*/ }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S08__DIV__{ /*background-color: #FF3 ;*/ }
+
+			}/* ! _PAGEROWS  define. <-START */
+
+
+			/* + NOTE| gutters.. */
+			@media  /* ! _PAGEGUTTERS  define. <-START */
+					{ 
+
+				/* x?.. contains image. **has no padding. */
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S00_IMAGE__DIV__{ display: inline-block ; width: 100%; /*background: blue ;*/ padding: 0 ; margin: 0 ; }
+
+				/* x16: LEFT| total span. `!note: percentages.. 100% / 16 => (6.25%)` */
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S00_L__DIV__{ margin-left:        0 ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_L__DIV__{ margin-left:    6.25% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S02_L__DIV__{ margin-left:   12.05% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S03_L__DIV__{ margin-left:   18.75% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S04_L__DIV__{ margin-left:   25.00% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S05_L__DIV__{ margin-left:   31.25% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S06_L__DIV__{ margin-left:   37.05% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S07_L__DIV__{ margin-left:   43.75% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S08_L__DIV__{ margin-left:   50.00% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S09_L__DIV__{ margin-left:   56.25% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S10_L__DIV__{ margin-left:   62.05% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S11_L__DIV__{ margin-left:   68.75% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S12_L__DIV__{ margin-left:   75.00% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S13_L__DIV__{ margin-left:   81.25% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S14_L__DIV__{ margin-left:   87.05% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S15_L__DIV__{ margin-left:   93.75% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S16_L__DIV__{ margin-left:  100.00% ; }
+
+				/* x16: RIGHT| total span. `!note: percentages.. 100% / 16 => (6.25%)` */
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S00_R__DIV__{ margin-right:        0 ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_R__DIV__{ margin-right:    6.25% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S02_R__DIV__{ margin-right:   12.05% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S03_R__DIV__{ margin-right:   18.75% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S04_R__DIV__{ margin-right:   25.00% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S05_R__DIV__{ margin-right:   31.25% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S06_R__DIV__{ margin-right:   37.05% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S07_R__DIV__{ margin-right:   43.75% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S08_R__DIV__{ margin-right:   50.00% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S09_R__DIV__{ margin-right:   56.25% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S10_R__DIV__{ margin-right:   62.05% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S11_R__DIV__{ margin-right:   68.75% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S12_R__DIV__{ margin-right:   75.00% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S13_R__DIV__{ margin-right:   81.25% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S14_R__DIV__{ margin-right:   87.05% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S15_R__DIV__{ margin-right:   93.75% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S16_R__DIV__{ margin-right:  100.00% ; }
+
+				/* x16: TOP| total span. `!note: percentages.. 100% / 16 => (6.25%)` */
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S00_T__DIV__{ margin-top:        0 ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_T__DIV__{ margin-top:    6.25% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S02_T__DIV__{ margin-top:   12.05% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S03_T__DIV__{ margin-top:   18.75% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S04_T__DIV__{ margin-top:   25.00% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S05_T__DIV__{ margin-top:   31.25% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S06_T__DIV__{ margin-top:   37.05% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S07_T__DIV__{ margin-top:   43.75% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S08_T__DIV__{ margin-top:   50.00% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S09_T__DIV__{ margin-top:   56.25% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S10_T__DIV__{ margin-top:   62.05% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S11_T__DIV__{ margin-top:   68.75% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S12_T__DIV__{ margin-top:   75.00% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S13_T__DIV__{ margin-top:   81.25% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S14_T__DIV__{ margin-top:   87.05% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S15_T__DIV__{ margin-top:   93.75% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S16_T__DIV__{ margin-top:  100.00% ; }
+
+				/* x16: BOTTOM| total span. `!note: percentages.. 100% / 16 => (6.25%)` */
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S00_B__DIV__{ margin-bottom:        0 ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_B__DIV__{ margin-bottom:    6.25% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S02_B__DIV__{ margin-bottom:   12.05% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S03_B__DIV__{ margin-bottom:   18.75% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S04_B__DIV__{ margin-bottom:   25.00% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S05_B__DIV__{ margin-bottom:   31.25% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S06_B__DIV__{ margin-bottom:   37.05% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S07_B__DIV__{ margin-bottom:   43.75% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S08_B__DIV__{ margin-bottom:   50.00% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S09_B__DIV__{ margin-bottom:   56.25% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S10_B__DIV__{ margin-bottom:   62.05% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S11_B__DIV__{ margin-bottom:   68.75% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S12_B__DIV__{ margin-bottom:   75.00% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S13_B__DIV__{ margin-bottom:   81.25% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S14_B__DIV__{ margin-bottom:   87.05% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S15_B__DIV__{ margin-bottom:   93.75% ; }
+				.__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S16_B__DIV__{ margin-bottom:  100.00% ; }
+
+			}/* ! _PAGEGUTTERS  define. <-START */
+
+
+
+			/* | */
+			/* v WRAP-HEAD| define the properties for the dive wrapper, that will hold the ebaydescription header. @/
+			#__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqA1__DIV__{ /@oldname: __CSSatr__TheEbayDescMAINWRAP__HEAD__MAINWRAP__DIV__@/
+				background-color: pink ;
+			}
+			*/
+
+			/* | */
+			/* v ... */
+			#__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqA1__DIV__{ /*background-color: pink ;*/ } /* ! todo: this needs to be updated so that, the content is held in seperate boxes, colred seprate in shades of gray to seperate it from the background. */
+			#__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqB1__DIV__{ /*background-color: pink ;*/ }
+			#__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqC1__DIV__{ /*background-color: pink ;*/ }
+			#__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqD1__DIV__{ /*background-color: pink ;*/ }
+			#__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqE1__DIV__{ /*background-color: pink ;*/ }
+			#__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqE2__DIV__{ /*background-color: pink ;*/ }
+			#__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqE3__DIV__{ /*background-color: pink ;*/ }
+			#__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqE4__DIV__{ /*background-color: pink ;*/ }
+			#__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqE5__DIV__{ /*background-color: pink ;*/ }
+			#__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqF1__DIV__{ /*background-color: pink ;*/ }
+
+
+			/* | */
+			/* v WRAP-BODY| define the properties for the dive wrapper, that will hold the ebaydescription header. */
+			#__CSSatr__TheEbayDescMAINWRAP__BODY__MAINWRAP__DIV__{
+				background-color: green ;
+			}
+
+			/*
+			.__CSSatr__TheEbayDescBODY__BLOCK__ROW_X3_Y1__DIV__{/ ! INFO| will create a `3 span` row.. that can hold 3 columns in it. and it will be  /
+				width: 100% ;
+				height: auto ;
+				background-color: green ;
+				position: relative ;
+			}*/
+			.__CSSatr__TheEbayDescBODY__TITLE__TEXTSTYLE__DIV__{
+				/*height: 30% ;*/
+				background-color: red ;
+				line-height: 1em ;
+				font-size: 3em ;
+				color: #AAA ;
+				position: relative ;
+				margin-left: 10% ;
+			}
+
+
+			/* v .. */
+			.__CSSatr__TheEbayDescBODY__CONTENTDESCRIPTION__TEXTSTYLE__DIV__{
+				/*height: 30% ;*/
+				background-color: red ;
+				line-height: 1em ;
+				font-size: 2em ;
+				color: #AAA ;
+				position: relative ;
+				margin-left: 10% ;
+			}
+			.__CSSatr__TheEbayDescBODY__CONTENTPARTS__TEXTSTYLE__DIV__{
+				/*height: 30% ;*/
+				background-color: red ;
+				line-height: 1em ;
+				font-size: 2em ;
+				color: #AAA ;
+				position: relative ;
+				margin-left: 10% ;
+			}
+
+
+			/* | */
+			/* v WRAP-FOOT| define the properties for the dive wrapper, that will hold the ebaydescription header. */
+			#__CSSatr__TheEbayDescMAINWRAP__FOOT__MAINWRAP__DIV__{
+				background-color: blue ;
+			}
+
+
+		</style>
+
+		<style>
+		/* ! NOTE| put the extra styling in here.. lke for the html css circles and shit. */
+
+			.circleBase {
+			 border-radius: 50%;
+			 behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+			}
+			.type1 {
+			 width: 100px;
+			 height: 100px;
+			 background: yellow;
+			 border: 3px solid red;
+			}
+			.type2 {
+			 width: 50px;
+			 height: 50px;
+			 background: #ccc;
+			 border: 3px solid #000;
+			}
+			.type3 {
+			 width: 500px;
+			 height: 500px;
+			 background: aqua;
+			 border: 30px solid blue;
+			}
+
+			/* v ... */
+			.trianlgeTrBase {
+				width: 0 ;
+				height: 0 ;
+				border-top: 100px solid red ;
+				border-left: 100px solid transparent ;
+				/* border-style: solid ; border-top-width: 3em ; border-right-width: 3em ; border-bottom-width: 3em ; border-left-width: 3em ; */
+			}
+
+			.trianlgeTrElModuleQuote{
+
+				float: right ; 
+
+				width: 0 ;
+				height: 0 ;
+
+				border-top-style: solid ; 
+				border-right-style: solid ; 
+				border-bottom-style: solid ; 
+				border-left-style: solid ; 
+
+				border-top-width: 20em ; 
+				border-right-width: 0em ; 
+				border-bottom-width: 0em ; 
+				border-left-width: 20em ;
+
+				/*border-top-color: red ; */
+				border-right-color: transparent ; 
+				border-bottom-color: transparent ; 
+				border-left-color: transparent ; 
+
+			}
+
+			/* v define| */
+			  .TxtQuoteBaseLEFT
+			, .TxtQuoteBaseRIGHT{
+
+				line-height: 0em ;
+
+				font-size:  /*69em*//*90em*/90em ;
+				font-weight: 700em ;
+
+			}
+			/* + ...*/
+			.TxtQuoteBaseLEFT{
+
+				/*color: orange ; */
+
+				top: 0.8em ;
+				left: -0.225em ;
+
+				float: left ;
+				position: relative ;
+
+			}
+			.TxtQuoteBaseRIGHT{
+
+				/*color: yellow ; */
+
+				top: -0.20em ;
+				right: -0.175em ;
+
+				float: right ;
+				position: relative ;
+
+			}
+
+
+			/* v ... */
+			.TopAngledStripeBase{
+
+				position: absolute ;
+				height: 12.5em ;
+				width: 100% ;
+				/*top: 1.25em ; */
+
+				/*background: blue ;*/
+
+				/*transform: rotate(13deg) translate(2em,-4em) ;*/
+				/*transform: rotate(18deg) translate(4em,-5em) ;*/
+				/*transform: rotate(20deg) translate(0em,-8.5em) ;*/
+				/*transform: rotate(20deg) translate(0em,-10em) ;*/
+				/*transform: rotate(23deg) translate(0em,-10em) ;*/
+				/*transform: rotate(27deg) translate(0em,-10em) ;*/
+				/*transform: rotate(28deg) translate(0em,-10em) ; */
+				/*transform: rotate(28deg) translate(0em,-10em) ; */
+				transform: rotate(28deg) translate(0em,-9em) ;
+				z-index: -1 ;
+
+			}
+
+
+		</style>
+
+	</head>
+
+
+	<!--
+	! COLORSWATCHES:
+
+		+ FONT-COLOR
+		1.__CSSswatch_W1f__ | 2.__CSSswatch_W2f__ | 3.__CSSswatch_W3f__
+		1.__CSSswatch_B1f__ | 2.__CSSswatch_B2f__ | 3.__CSSswatch_B3f__
+		1.__CSSswatch_C1f__ | 2.__CSSswatch_C2f__ | 3.__CSSswatch_C3f__
+
+		+ BACKGROUND
+		1.__CSSswatch_W1bg__ | 2.__CSSswatch_W2bg__ | 3.__CSSswatch_W3bg__
+		1.__CSSswatch_B1bg__ | 2.__CSSswatch_B2bg__ | 3.__CSSswatch_B3bg__
+		1.__CSSswatch_C1bg__ | 2.__CSSswatch_C2bg__ | 3.__CSSswatch_C3bg__
+
+	-->
+
+	<!-- NOTE| html `body`, element. -->
+	<body id="__CSSatr__TheEbayDescHTML__BODY__MAINWRAP__DIV__" class="__CSSswatch_B3bg__">
+
+
+		<!-- !note: the code block sections, are tagged below as: 
+
+			<x-- ! _CODESECTION  `#TAG: the page header`. #start -x>
+			<x-- ! _CODESECTION  `#TAG: the page header`. #end -x>
+
+			0. `#TAG: the page header` <- this is the primary page header.
+			1. `#TAG: the QUOTE and PCIMGFRONT` <- the left column hold the quotes, and the right column holds the `front image view of the pc`.
+				a. left column:  <x-- ! _SECTIONCOLUMN  `#TAG: the QUOTE`. the LEFT column. #start -x>
+				b. right column: <x-- ! _SECTIONCOLUMN  `#TAG: the PCIMGFRONT`. the RIGHT column. #start -x>
+			2. ...
+			   <x-- ! _CODESECTION  `#TAG: the `PARTS` in left column, with the `DESC` and the `FPSTESTRESULTS` in the right column. #end -x>
+			   <x-- ! _CODESECTION  `#TAG: the page suported technolagies stuff.`. #end -x>			
+			3. ...
+				<x-- ! _CODESECTION  `#TAG: the shiping informayion needs to go here`. #end -x>
+			4. ...
+				<x-- ! _CODESECTION  `#TAG: the page footer, with the company logo and shit needs to go here`. #start -x>
+
+		-->
+
+
+		<!-- { _CODESECTION  `#TAGv1: the top spacer.. because the columns are differnat sizes, and the margin needs to match.`. #start -->
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__COL_T2_S0__DIV__"></div>
+
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S04__DIV__">
+			<div class="__CSSfont__GLOBALalign_R__ __CSSfont__H1a__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S02_T__DIV__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_R__DIV__">
+				<font class="__CSSswatch_C3f__"></font>
+			</div>
+		</div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S04__DIV__">
+		</div>
+		<!-- } _CODESECTION  `#TAGv1: the top spacer.. because the columns are differnat sizes, and the margin needs to match.`. #END -->
+
+
+		<!-- { _CODESECTION  `#TAGv1: the top block.. need to make it span the whole page so the rectangle can be rotated.`. #start -->
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__COL_T2_S0__DIV__"></div>
+
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S04__DIV__">
+			<div class="__CSSfont__GLOBALalign_R__ __CSSfont__H1a__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S00_T__DIV__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_R__DIV__" >
+
+				<!-- v Quote| char RIGHT -->
+				<div style="position: absolute; top: 0em ; /*background: blue;*/ width: 100%; height: 100% ; overflow: hidden; overflow-x: hidden ;">
+					<div class="TopAngledStripeBase __CSSswatch_C2bg__"></div>
+				</div>
+
+			</div>
+		</div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S04__DIV__">
+		</div>
+		<!-- } _CODESECTION  `#TAGv1: the top block.. need to make it span the whole page so the rectangle can be rotated.`. #END -->
+
+
+
+		<!-- ! _CODESECTION  `#TAGv1: the page header`. #start -->
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__COL_T2_S0__DIV__"></div>
+
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__">
+		</div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__">
+
+			<!-- !column| the left, to hold the page logo. -->
+			<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S00_IMAGE__DIV__">
+				<img src="https://i.ibb.co/vvgrQ7H/Ssc-Computer-Logo-PNG-blackish-bg.png" style="width: 100%; height: auto;" alt="MSI B450- A PRO MAX">
+			</div>
+
+		</div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__">
+		</div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S05__DIV__" id="__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqA1__DIV__">
+
+			<!-- 
+				__CSSswatch_W1f__
+				__CSSswatch_W2f__
+				__CSSswatch_W3f__
+			-->
+
+			<!-- !column| the right, to hold the page header. -->
+			<div class="__CSSfont__GLOBALalign_R__ __CSSfont__H1a__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_R__DIV__"><!-- !note| dont pad now.. a spacer was added to pad before it. __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_T__DIV__ -->
+				<font class="__CSSswatch_W1f__ __CSSswatch_C3textoutline__" >GAMING COMPUTER</font>
+			</div>
+			<div class="__CSSfont__GLOBALalign_R__ __CSSfont__H2a__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_R__DIV__">
+				<font class="__CSSswatch_W3f__ __CSSswatch_C3textoutline__">high octane gaming</font>
+			</div>
+
+		</div>
+		<!-- spacer...
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__COL_T2_S0__DIV__"></div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S08__DIV__" id="__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqF1__DIV__">
+			<div class="__CSSfont__GLOBALalign_L__">
+				<font class="__CSSfont__T1c__ __CSSswatch_W2f__" style=""><br>&nbsp;</font>
+			</div>
+		</div>
+		-->
+		<!-- ! _CODESECTION  `#TAGv1: the page header`. #end -->
+
+
+
+<!-- !IMPORTANT| The new shit is below!!! keep it.. remove the old shit above this line.. -->
+
+
+
+
+
+
+
+
+		<!-- { _CODESECTION  `#TAGv2: the WHATTOEXPECT quotes column L, the front of case view pc image column R`. #start
+		KEEP! diagram:
+			dummy1     TAGqF1   TAGqB1     dummy8
+			|         |        |          |
+			V         V        v          v
+			[--][F1][F1][F1]|[B1][B1][b1][--]
+			   1   2   3   4    5   6   7   8
+			+ __CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__
+			+ __CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S03__DIV__
+			+ __CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S03__DIV__
+			+ __CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__
+		-->
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__COL_T2_S0__DIV__"></div>
+
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__"><!-- dummy1 --></div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S03__DIV__" id="__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqF1__DIV__">
+		<!-- $TAGqF1: sclice 1. -->
+
+
+			<!-- !column| the RIGHT, side shit. -->
+
+
+			<!-- block: head title -->
+			<div class="__CSSfont__GLOBALalign_L__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S05_T__DIV__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_R__DIV__">
+				<font class="__CSSfont__H1c__ __CSSswatch_W2f__">WHAT TO EXPECT!</font>
+			</div>
+
+			<div class="__CSSfont__GLOBALalign_L__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_R__DIV__">
+				<font class="__CSSfont__H2c__ __CSSswatch_W2f__">TESTED|</font>
+				<font class="__CSSfont__H3c__ __CSSswatch_C3f__">guarenteed performance</font>
+			</div>
+
+
+			<!-- block: body text -->
+			<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_R__DIV__">
+
+
+				<!-- \n DUMMY to force, a line break. --><font class="__CSSfont__LN1moduleQUOTEv1__"></font>
+				<br>
+				<div class="__CSSfont__W1moduleQUOTEv1__ ">
+
+					<!-- v Quote| char LEFT -->
+					<div class="TxtQuoteBaseLEFT __CSSswatch_W2f__">&#8220</div>
+
+					<!-- v Quote| text body -->
+					<div class="__CSSfont__W2moduleQUOTEv1__ __CSSswatch_C3bg__">
+
+						<div class="__CSSfont__GLOBALalign_R__ __CSSfont__W3moduleQUOTEv1__"><!--!old: __CSSfont__W3moduleQUOTEv1__ -->
+								<font class="__CSSfont__T1moduleQUOTEv1__ __CSSswatch_W2f__">Nvidia</font>
+						</div>
+
+						<div class="__CSSfont__GLOBALalign_L__ __CSSfont__W4moduleQUOTEv1__">
+							<font class="__CSSfont__T2moduleQUOTEv1__ __CSSswatch_W2f__">Expect amazing performance at great value with Nvidia's gtx 1650 super GPU </font> <!-- FCKITTTTTTTTTTFCKITTTTTTTT -->
+						</div>
+
+						<div class="__CSSfont__GLOBALalign_L__ __CSSfont__W5moduleQUOTEv1__">
+							<br><font class="__CSSfont__T3moduleQUOTEv1__ __CSSswatch_W3f__">"The GeForce GTX 1650 SUPER is up to 50% faster than the original GTX 1650 and up to 2X faster than the previous-generation GTX 1050"</font>
+						</div>
+						<div class="__CSSfont__GLOBALalign_L__ __CSSfont__W6moduleQUOTEv1__">
+							<br><font class="__CSSfont__T4moduleQUOTEv1__ __CSSswatch_W3f__">-(https://www.nvidia.com/en-us/geforce/graphics-cards/gtx-1650-super/)</font>
+						</div>
+
+						<div class="__CSSfont__GLOBALalign_L__ __CSSfont__W7moduleQUOTEv1__">
+							<!-- . put triangle HERE --><div class="__CSSswatch_C3border__ trianlgeTrElModuleQuote "></div> <!--- __CSSfont__B2d__ __CSSswatch_C3bg__ __CSSswatch_C3f__ __CSSswatch_B1border__ -->
+							<!-- !ok| <div class="TxtQuoteBaseLEFT __CSSswatch_C3border__">"</div> -->
+							<!-- !ok| <div class="TxtQuoteBaseRIGHT __CSSswatch_C3border__">"</div> -->
+						</div>
+
+					</div>
+
+					<!-- v Quote| char RIGHT -->
+					<div class="TxtQuoteBaseRIGHT __CSSswatch_W2f__">&#8221</div>
+
+				</div>
+
+
+				<!-- \n DUMMY to force, a line break. --><font class="__CSSfont__LI1moduleQUOTEv1__"></font>
+				<br>
+				<div class="__CSSfont__W1moduleQUOTEv1__ ">
+
+					<!-- v Quote| char LEFT -->
+					<div class="TxtQuoteBaseLEFT __CSSswatch_W2f__">&#8220</div>
+
+					<!-- v Quote| text body -->					
+					<div class="__CSSfont__W2moduleQUOTEv1__ __CSSswatch_C3bg__">
+
+						<div class="__CSSfont__GLOBALalign_R__ __CSSfont__W3moduleQUOTEv1__"><!--!old: __CSSfont__W3moduleQUOTEv1__ -->
+								<font class="__CSSfont__T1moduleQUOTEv1__ __CSSswatch_W2f__">WD</font>
+						</div>
+
+						<div class="__CSSfont__GLOBALalign_L__ __CSSfont__W4moduleQUOTEv1__">
+							<font class="__CSSfont__T2moduleQUOTEv1__ __CSSswatch_W2f__">Expect faster loading times with western Digital's m.2 SSD</font> <!-- FCKITTTTTTTTTTFCKITTTTTTTT -->
+						</div>
+
+						<div class="__CSSfont__GLOBALalign_L__ __CSSfont__W5moduleQUOTEv1__">
+							<br><font class="__CSSfont__T3moduleQUOTEv1__ __CSSswatch_W3f__">"Game load times dropped between 25 to 60 per cent by switching to an SSD"</font>
+						</div>
+						<div class="__CSSfont__GLOBALalign_L__ __CSSfont__W6moduleQUOTEv1__">
+							<br><font class="__CSSfont__T4moduleQUOTEv1__ __CSSswatch_W3f__">-(https://www.eurogamer.net/articles/digitalfoundry-2018-09-23-why-ssds-are-essential-for-pc-gaming-7005)</font>
+						</div>
+
+						<div class="__CSSfont__GLOBALalign_L__ __CSSfont__W7moduleQUOTEv1__">
+							<!-- . put triangle HERE --><div class="__CSSswatch_C3border__ trianlgeTrElModuleQuote "></div> <!--- __CSSfont__B2d__ __CSSswatch_C3bg__ __CSSswatch_C3f__ __CSSswatch_B1border__ -->
+						</div>
+
+					</div>
+
+					<!-- v Quote| char RIGHT -->
+					<div class="TxtQuoteBaseRIGHT __CSSswatch_W2f__">&#8221</div>
+
+				</div>
+
+
+			</div>
+
+
+		</div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S04__DIV__">
+		<!-- $TAGqB1: sclice 1. -->
+
+
+			<!-- !column| the RIGHT, side shit. -->
+			<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S00_IMAGE__DIV__"> <!-- !old| class=> __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_R__DIV__ -->
+				<img src="https://i.ibb.co/BqTQ5pg/00-htmlimages-Artboard-1-copy.png" style="width: 100%; height: auto;" alt="MSI B450- A PRO MAX">
+			</div>
+
+		</div>
+		<!-- } _CODESECTION  `#TAGv2: the WHATTOEXPECT quotes column L, the front of case view pc image column R`. #end -->
+
+
+
+
+
+		<!-- { _CODESECTION  `#TAGv1: the `PARTS` in left column, with the `DESC` and the `FPSTESTRESULTS` in the right column. #start
+		KEEP! diagram:
+			dummy1     TAGqF1   TAGqB1     dummy8
+			|         |        |          |
+			V         V        v          v
+			[--][F1][F1][F1]|[B1][B1][b1][--]
+			   1   2   3   4    5   6   7   8
+			+ __CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__
+			+ __CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S03__DIV__
+			+ __CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S03__DIV__
+			+ __CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__
+		-->
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__COL_T2_S0__DIV__"></div>
+
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__"><!-- dummy1 --></div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S06__DIV__" id="__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqF1__DIV__">
+		<!-- $TAGqF1: sclice 1. -->
+
+
+			<!-- LEFT COLUMN. -->
+
+			<!-- block: head title -->
+			<div class="__CSSfont__GLOBALalign_L__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S00_L__DIV__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S00_T__DIV__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S00_R__DIV__"> <!-- ...__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_T__DIV__ -->
+				<font class="__CSSfont__HXc__ __CSSswatch_C3f__">DESCRIPTION</font>
+			</div>
+
+			<!-- block: body text -->
+			<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S00_R__DIV__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S00_L__DIV__">
+
+				<font class="__CSSfont__TXc__ __CSSswatch_W2f__" style="/*color: white;*/">
+					With this computer you can expect 80 to 100+ fps in most AAA/ Modern FPS titles . It is completely new, no used or old parts that were found in a dumpster. This computer has the power of an entry level gaming PC and has an upgrade path that won't force you to buy a new PC every year. windows 10 is pre-installed and is not OEM, so when you do upgrade you won't need to buy another key. The case is stylish and shinny with an acrylic side panel view of the inner components and 2 pre-installed blue led fans on the front
+				</font>
+
+			</div>
+
+
+		</div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__"></div>
+		<!-- spacer... -->
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__COL_T2_S0__DIV__"></div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S08__DIV__" id="__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqF1__DIV__">
+			<div class="__CSSfont__GLOBALalign_L__">
+				<font class="__CSSfont__T1c__ __CSSswatch_W2f__" style=""><br>&nbsp;</font>
+			</div>
+		</div>
+		<!-- } _CODESECTION  `#TAGv1: the `PARTS` in left column, with the `DESC` and the `FPSTESTRESULTS` in the right column. #end -->
+
+
+
+		<!-- { _CODESECTION  `#TAGv2: the WHATSINSIDE parts column L, the under the side-panel view pc image column R`. #start
+		KEEP! diagram:
+			dummy1     TAGqF1   TAGqB1     dummy8
+			|         |        |          |
+			V         V        v          v
+			[--][F1][F1][F1]|[B1][B1][B1][B1]
+			   1   2   3   4    5   6   7   8
+			+ __CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__
+			+ __CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S03__DIV__
+			+ __CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S03__DIV__
+			+ __CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__
+		-->
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__COL_T2_S0__DIV__"></div>
+
+
+
+		<!-- !SPACER| HERE...
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S08__DIV__" id="__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqF1__DIV__">
+			<div class="__CSSfont__GLOBALalign_L__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_T__DIV__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_R__DIV__"></div>
+		</div>
+		-->
+
+
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__"><!-- dummy1 --></div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S03__DIV__" id="__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqF1__DIV__">
+		<!-- $TAGqF1: sclice 1. -->
+
+
+			<!-- !column| the RIGHT, side shit. -->
+
+
+			<!-- block: head title -->
+			<div class="__CSSfont__GLOBALalign_L__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S08_T__DIV__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_R__DIV__">
+				<font class="__CSSfont__H1e__ __CSSswatch_W2f__">WHATS INSIDE?</font>
+			</div>
+			<div class="__CSSfont__GLOBALalign_L__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_R__DIV__">
+				<font class="__CSSfont__H2e__ __CSSswatch_W2f__">PARTS|</font>
+				<font class="__CSSfont__H3e__ __CSSswatch_C3f__">listed here</font>
+			</div>
+
+			<!-- block: body text -->
+			<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_R__DIV__">
+
+
+				<!-- \n DUMMY to force, a line break. --><font class="__CSSfont__LN1e__"></font>
+				<br>
+				<div class="__CSSfont__W1e__ ">
+					<div class="__CSSfont__GLOBALalign_L__ __CSSfont__W2e__ __CSSswatch_B1bg__">
+						<div class="__CSSfont__W3e__">
+								<font class="__CSSfont__T1e__ __CSSswatch_W2f__">MOTHERBOARD RAM| </font>
+								<font class="__CSSfont__T2e__ __CSSswatch_W2f__">G.Skill </font> <!-- FCKITTTTTTTTTTFCKITTTTTTTT -->
+						</div>
+						<br><font class="__CSSfont__T3e__ __CSSswatch_W3f__">16GB (2 x 8GB) Aegis DDR4</font>
+						<br><font class="__CSSfont__T3e__ __CSSswatch_W3f__">3000MHz  CL16</font>
+					</div>
+				</div>
+
+
+				<!-- \n DUMMY to force, a line break. --><font class="__CSSfont__LI1e__"></font>
+				<br>
+				<div class="__CSSfont__W1e__ ">
+					<div class="__CSSfont__GLOBALalign_L__ __CSSfont__W2e__ __CSSswatch_B1bg__">
+						<div class="__CSSfont__W3e__">
+								<font class="__CSSfont__T1e__ __CSSswatch_W2f__">RYZEN PROCESSOR| </font>
+								<font class="__CSSfont__T2e__ __CSSswatch_W2f__">AMD</font> <!-- FCKITTTTTTTTTTFCKITTTTTTTT -->
+						</div>
+						<br><font class="__CSSfont__T3e__ __CSSswatch_W3f__">Ryzen 3 3200G</font>
+						<br><font class="__CSSfont__T3e__ __CSSswatch_W3f__">4-Core Unlocked Processor</font>
+					</div>
+				</div>
+
+
+				<!-- \n DUMMY to force, a line break. --><font class="__CSSfont__LI1e__"></font>
+				<br>
+				<div class="__CSSfont__W1e__ ">
+					<div class="__CSSfont__GLOBALalign_L__ __CSSfont__W2e__ __CSSswatch_B1bg__">
+						<div class="__CSSfont__W3e__">
+								<font class="__CSSfont__T1e__ __CSSswatch_W2f__">SOLID STATE DRIVE| </font>
+								<font class="__CSSfont__T2e__ __CSSswatch_W2f__">WD</font> <!-- FCKITTTTTTTTTTFCKITTTTTTTT -->
+						</div>
+						<br><font class="__CSSfont__T3e__ __CSSswatch_W3f__">Blue 3D NAND 500GB</font>
+						<br><font class="__CSSfont__T3e__ __CSSswatch_W3f__">Internal M.2. SSD</font>
+					</div>
+				</div>
+
+
+				<!-- \n DUMMY to force, a line break. --><font class="__CSSfont__LI1e__"></font>
+				<br>
+				<div class="__CSSfont__W1e__ ">
+					<div class="__CSSfont__GLOBALalign_L__ __CSSfont__W2e__ __CSSswatch_B1bg__">
+						<div class="__CSSfont__W3e__">
+								<font class="__CSSfont__T1e__ __CSSswatch_W2f__">GRAPHICS CARD| </font>
+								<font class="__CSSfont__T2e__ __CSSswatch_W2f__">GIGABYTE</font> <!-- FCKITTTTTTTTTTFCKITTTTTTTT -->
+						</div>
+						<br><font class="__CSSfont__T3e__ __CSSswatch_W3f__">GeForce</font>
+						<br><font class="__CSSfont__T3e__ __CSSswatch_W3f__">GTX 1650 SUPER WINDFORCE OC</font>
+						<br><font class="__CSSfont__T3e__ __CSSswatch_W3f__">4G Graphics Card</font>
+					</div>
+				</div>
+
+
+				<!-- \n DUMMY to force, a line break. --><font class="__CSSfont__LI1e__"></font>
+				<br>
+				<div class="__CSSfont__W1e__ ">
+					<div class="__CSSfont__GLOBALalign_L__ __CSSfont__W2e__ __CSSswatch_B1bg__">
+						<div class="__CSSfont__W3e__">
+								<font class="__CSSfont__T1e__ __CSSswatch_W2f__">MOTHERBOARD| </font>
+								<font class="__CSSfont__T2e__ __CSSswatch_W2f__">MSI</font> <!-- FCKITTTTTTTTTTFCKITTTTTTTT -->
+						</div>
+						<br><font class="__CSSfont__T3e__ __CSSswatch_W3f__">B450-A PRO MAX</font>
+						<br><font class="__CSSfont__T3e__ __CSSswatch_W3f__">ATX Motherboard</font>
+					</div>
+				</div>
+
+
+				<!-- \n DUMMY to force, a line break. --><font class="__CSSfont__LI1e__"></font>
+				<br>
+				<div class="__CSSfont__W1e__ ">
+					<div class="__CSSfont__GLOBALalign_L__ __CSSfont__W2e__ __CSSswatch_B1bg__">
+						<div class="__CSSfont__W3e__">
+								<font class="__CSSfont__T1e__ __CSSswatch_W2f__">POWER SUPPLY| </font>
+								<font class="__CSSfont__T2e__ __CSSswatch_W2f__">Thermaltake</font> <!-- FCKITTTTTTTTTTFCKITTTTTTTT -->
+						</div>
+						<br><font class="__CSSfont__T3e__ __CSSswatch_W3f__">Smart 500W</font>
+						<br><font class="__CSSfont__T3e__ __CSSswatch_W3f__">80+ White Certified PSU</font>
+					</div>
+				</div>
+
+			</div>
+
+
+		</div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S04__DIV__">
+		<!-- $TAGqB1: sclice 1. -->
+
+
+			<!-- !column| the RIGHT, side shit. -->
+			<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S00_IMAGE__DIV__"> <!-- !old| class=> __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_R__DIV__ -->
+				<img src="https://i.ibb.co/0YRRGFk/00-htmlimages-Artboard-1-copy-2.png" style="width: 100%; height: auto;" alt="MSI B450- A PRO MAX">
+			</div>
+
+
+		</div>
+		<!-- spacer... -->
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__COL_T2_S0__DIV__"></div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S08__DIV__" id="__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqF1__DIV__">
+			<div class="__CSSfont__GLOBALalign_L__">
+				<font class="__CSSfont__T1c__ __CSSswatch_W2f__" style=""><br>&nbsp;</font>
+			</div>
+		</div>
+		<!-- } _CODESECTION  `#TAGv2: the WHATSINSIDE parts column L, the under the side-panel view pc image column R`. #end -->
+
+
+
+		<!-- { _CODESECTION  `#TAGv2: the FPSPERFORMANCE column L, the farcry 3 benchmark images column R`. #start
+		KEEP! diagram:
+			dummy1     TAGqF1   TAGqB1     dummy8
+			|         |        |          |
+			V         V        v          v
+			[--][F1][F1][F1]|[B1][B1][B1][B1]
+			   1   2   3   4    5   6   7   8
+			+ __CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__
+			+ __CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S03__DIV__
+			+ __CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S03__DIV__
+			+ __CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__
+		-->
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__COL_T2_S0__DIV__"></div>
+
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__"><!-- dummy1 --></div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S03__DIV__" id="__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqF1__DIV__">
+		<!-- $TAGqF1: sclice 1. -->
+
+
+			<!-- !column| the RIGHT, side shit. -->
+
+
+			<!-- block: head title -->
+			<div class="__CSSfont__GLOBALalign_L__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S08_T__DIV__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_R__DIV__">
+				<font class="__CSSfont__H1d__ __CSSswatch_W2f__">REALTIME GAMEPLAY</font>
+			</div>
+			<div class="__CSSfont__GLOBALalign_L__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_R__DIV__">
+				<font class="__CSSfont__H2d__ __CSSswatch_W2f__">FPS| </font>
+				<font class="__CSSfont__H3d__ __CSSswatch_C3f__">RESULT </font>
+				<font class="__CSSfont__H4d__ __CSSswatch_C3f__">*tested at stock speed</font>
+			</div>
+
+
+			<!-- block: list text -->
+			<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_R__DIV__"><!-- __CSSfont__LN1d__ -->
+				
+				<!-- !note: performace list, of tested games... -->
+
+				<!-- \n DUMMY to force, a line break. --><font class="__CSSfont__LN1d__"></font>
+				<br><!-- o BULLET --><div class="__CSSfont__B1d__"><div class="circleBase __CSSfont__B2d__ __CSSswatch_C3bg__ __CSSswatch_C3f__ __CSSswatch_B1border__"></div></div>
+					<font class="__CSSfont__T1d__ __CSSswatch_B2f__">PUBG</font>
+				<br><font class="__CSSfont__T2d__ __CSSswatch_W3f__">Playerunknown’s battlegrounds</font>
+				<br><font class="__CSSfont__T3d__ __CSSswatch_W3f__">Framerate option: </font><font class="__CSSfont__T4d__ __CSSswatch_W2f__">unlocked</font>
+				<br><font class="__CSSfont__T3d__ __CSSswatch_W3f__">Graphics preset: </font><font class="__CSSfont__T4d__ __CSSswatch_W2f__">ultra</font>
+				<br><font class="__CSSfont__T3d__ __CSSswatch_W3f__">FPS: </font><font class="__CSSfont__T4d__ __CSSswatch_W2f__">[80+]</font>
+				<br>
+
+				<!-- \n DUMMY to force, a line break. --><font class="__CSSfont__LI1d__"></font>
+				<br><!-- o BULLET --><div class="__CSSfont__B1d__"><div class="circleBase __CSSfont__B2d__ __CSSswatch_C3bg__ __CSSswatch_C3f__ __CSSswatch_B1border__"></div></div>
+					<font class="__CSSfont__T1d__ __CSSswatch_B2f__">FORTNITE</font>
+				<br><font class="__CSSfont__T3d__ __CSSswatch_W3f__">Framerate option: </font><font class="__CSSfont__T4d__ __CSSswatch_W2f__">unlocked</font>
+				<br><font class="__CSSfont__T3d__ __CSSswatch_W3f__">Graphics preset: </font><font class="__CSSfont__T4d__ __CSSswatch_W2f__">ultra</font>
+				<br><font class="__CSSfont__T3d__ __CSSswatch_W3f__">FPS: </font><font class="__CSSfont__T4d__ __CSSswatch_W2f__">[80+]</font>
+				<br>
+
+				<!-- \n DUMMY to force, a line break. --><font class="__CSSfont__LI1d__"></font>
+				<br><!-- o BULLET --><div class="__CSSfont__B1d__"><div class="circleBase __CSSfont__B2d__ __CSSswatch_C3bg__ __CSSswatch_C3f__ __CSSswatch_B1border__"></div></div>
+					<font class="__CSSfont__T1d__ __CSSswatch_B2f__">GTAV5</font>
+				<br><font class="__CSSfont__T2d__ __CSSswatch_W3f__">Grand theft auto 5</font>
+				<br><font class="__CSSfont__T3d__ __CSSswatch_W3f__">Framerate option: </font><font class="__CSSfont__T4d__ __CSSswatch_W2f__">unlocked</font>
+				<br><font class="__CSSfont__T3d__ __CSSswatch_W3f__">Graphics preset: </font><font class="__CSSfont__T4d__ __CSSswatch_W2f__">very high</font>
+				<br><font class="__CSSfont__T3d__ __CSSswatch_W3f__">FPS: </font><font class="__CSSfont__T4d__ __CSSswatch_W2f__">[70+]</font>
+				<br>
+
+				<!-- \n DUMMY to force, a line break. --><font class="__CSSfont__LI1d__"></font>
+				<br><!-- o BULLET --><div class="__CSSfont__B1d__"><div class="circleBase __CSSfont__B2d__ __CSSswatch_C3bg__ __CSSswatch_C3f__ __CSSswatch_B1border__"></div></div>
+					<font class="__CSSfont__T1d__ __CSSswatch_B2f__">VALORANT</font>
+				<br><font class="__CSSfont__T3d__ __CSSswatch_W3f__">Framerate option: </font><font class="__CSSfont__T4d__ __CSSswatch_W2f__">unlocked</font>
+				<br><font class="__CSSfont__T3d__ __CSSswatch_W3f__">Graphic preset: </font><font class="__CSSfont__T4d__ __CSSswatch_W2f__">all on very high</font>
+				<br><font class="__CSSfont__T3d__ __CSSswatch_W3f__">FPS: </font><font class="__CSSfont__T4d__ __CSSswatch_W2f__">[160+]</font>
+				<br>
+
+				<!-- \n DUMMY to force, a line break. --><font class="__CSSfont__LI1d__"></font>
+				<br><!-- o BULLET --><div class="__CSSfont__B1d__"><div class="circleBase __CSSfont__B2d__ __CSSswatch_C3bg__ __CSSswatch_C3f__ __CSSswatch_B1border__"></div></div>
+					<font class="__CSSfont__T1d__ __CSSswatch_B2f__">BORDERLANDS 3</font>
+				<br><font class="__CSSfont__T3d__ __CSSswatch_W3f__">Framerate option: </font><font class="__CSSfont__T4d__ __CSSswatch_W2f__">unlocked</font>
+				<br><font class="__CSSfont__T3d__ __CSSswatch_W3f__">Graphic preset: </font><font class="__CSSfont__T4d__ __CSSswatch_W2f__">medium to high</font>
+				<br><font class="__CSSfont__T3d__ __CSSswatch_W3f__">FPS: </font><font class="__CSSfont__T4d__ __CSSswatch_W2f__">[81+]</font>
+
+			</div>
+
+
+		</div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S04__DIV__">
+		<!-- $TAGqB1: sclice 1. -->
+
+
+			<!-- !column| the RIGHT, side shit. -->
+			<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S00_IMAGE__DIV__"> <!-- !old| class=> __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_R__DIV__ -->
+				<img src="https://i.ibb.co/yngZrJ9/00-htmlimages-Artboard-1-copy-3.png" style="width: 100%; height: auto;" alt="MSI B450- A PRO MAX">
+			</div>
+
+
+		</div>
+		<!-- spacer... -->
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__COL_T2_S0__DIV__"></div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S08__DIV__" id="__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqF1__DIV__">
+			<div class="__CSSfont__GLOBALalign_L__">
+				<font class="__CSSfont__T1c__ __CSSswatch_W2f__" style=""><br>&nbsp;</font>
+			</div>
+		</div>
+		<!-- } _CODESECTION  `#TAGv2: the FPSPERFORMANCE column L, the farcry 3 benchmark images column R`. #end -->
+
+
+		<!-- { _CODESECTION  `#TAGv2: the page suported technolagies stuff.`. #start
+		KEEP! diagram:
+			dummy1     TAGqD1          dummy8
+			|         |                     |
+			V         V                     v
+			[--][D1][D1][D1]|[D1][D1][D1][--] header
+			[--][E2][E2][E2]|[E3][E3][E3][--] image1
+			[--][E4][E4][E4]|[E5][E5][E5][--] image2
+			   1   2   3   4    5   6   7   8
+			header
+			+ __CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__
+			+ __CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S06__DIV__
+			+ __CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__
+			image1
+			+ __CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__
+			+ __CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S03__DIV__
+			+ __CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S03__DIV__
+			+ __CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__
+			.. ect. 
+		-->
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__COL_T2_S0__DIV__"></div>
+
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__"><!-- dummy1 --></div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S06__DIV__" id="__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqE1__DIV__">
+		<!-- $TAGqF1: sclice 1. -->
+
+
+			<!-- block: head title -->
+			<div class="__CSSfont__GLOBALalign_L__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_T__DIV__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_R__DIV__">
+				<font class="__CSSfont__H1c__ __CSSswatch_W2f__">SUPPORTED TECHNOLAGIES</font>
+			</div>
+
+			<div class="__CSSfont__GLOBALalign_L__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_R__DIV__">
+				<font class="__CSSfont__H2c__ __CSSswatch_W2f__">LISTED|</font>
+				<font class="__CSSfont__H3c__ __CSSswatch_C3f__">features</font>
+			</div>
+
+
+		</div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__"><!-- dummy8 --></div>
+
+		<!-- 
+		KEEP! diagram: ...continued. IMAGE1
+			[--][E2][E2][E2]|[E3][E3][E3][--] image1
+		-->
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__COL_T2_S0__DIV__"></div>
+
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__"><!-- dummy1 --></div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S04__DIV__" id="__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqE2__DIV__">
+		<!-- $TAGqF1: sclice 1. -->
+
+
+			<!-- block: body image -->
+			<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S00_R__DIV__">
+				<!-- ! important, finish up!| __CSSfont__T1c__.. this is the body content BUT IT IS ACTUALY MORE LIKE A HEADER, LIKE A HEADER IMAGE, but it is an image so it will needs a border applied instead of a font color style tag class. -->
+				<img src="C:\Users\SAM2\Desktop\_output\EbayDescripion_html_\ImagesOFFLINE\__PNGoffline_IMAGE1__product_6_20190711130744_5d26c42013318.png" style="width: 100%; height: 100%; object-fit: contain;" alt="MSI B450- A PRO MAX"><!-- <img src="https://asset.msi.com/resize/image/global/product/product_6_20190711130744_5d26c42013318.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png" width="500" height="400" alt=""> -->
+			</div>
+
+
+		</div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S02__DIV__" id="__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqE3__DIV__">
+		<!-- $TAGqB1: sclice 1. -->
+
+
+			<!-- block: body text -->
+			<div class="__CSSfont__GLOBALalign_L__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_R__DIV__">
+
+				<!-- \n DUMMY to force, a line break. --><font class="__CSSfont__LN1d__"></font>
+				<br><!-- o BULLET --><div class="__CSSfont__B1d__"><div class="circleBase __CSSfont__B2d__ __CSSswatch_C3bg__ __CSSswatch_C3f__ __CSSswatch_B1border__"></div></div>
+					<font class="__CSSfont__T1d__ __CSSswatch_B2f__">The MSI B450- A PRO MAX</font>
+				<br><font class="__CSSfont__T2d__ __CSSswatch_W3f__">Features:</font>
+				<br><font class="__CSSfont__T3d__ __CSSswatch_W2f__">&#8226; Audio boost provides studio grade sound quality.</font>
+				<br><font class="__CSSfont__T3d__ __CSSswatch_W2f__">&#8226; AMD Turbo USB 3.2 Gen 2.</font>
+				<br><font class="__CSSfont__T3d__ __CSSswatch_W2f__">&#8226; DDR4 Boost: XMP profile is set to automatically speed up the ram.</font>
+				<br><font class="__CSSfont__T3d__ __CSSswatch_W2f__">&#8226; PCIE Steel slot to protect the slot against bending.</font>
+				<br><font class="__CSSfont__T3d__ __CSSswatch_W2f__">&#8226; Has support for multiple GPU's</font>
+				<br>
+
+				<!-- !oldcode|
+				<font class="__CSSfont__T1c__ __CSSswatch_W3f__">
+					<br>The MSI B450- A PRO MAX Features:
+					<br>&nbsp;Audio boost provides studio grade sound quality.
+					<br>&nbsp;AMD Turbo USB 3.2 Gen 2.
+					<br>&nbsp;DDR4 Boost: XMP profile is set to automatically speed up the ram.
+					<br>&nbsp;PCIE Steel slot to protect the slot against bending.
+					<br>&nbsp;Has support for multiple GPU's
+				</font>
+				-->
+			</div>
+
+
+		</div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__"></div>
+
+
+		<!-- 
+		KEEP! diagram: ...continued. IMAGE1
+			[--][E4][E4][E4]|[E5][E5][E5][--] image2
+		-->
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__COL_T2_S0__DIV__"></div>
+
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__"><!-- dummy1 --></div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S04__DIV__" id="__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqE4__DIV__">
+		<!-- $TAGqF1: sclice 1. -->
+
+
+			<!-- block: body image -->
+			<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S00_R__DIV__">
+				<!-- ! important, finish up!| __CSSfont__T1c__.. this is the body content BUT IT IS ACTUALY MORE LIKE A HEADER, LIKE A HEADER IMAGE, but it is an image so it will needs a border applied instead of a font color style tag class. -->
+				<img src="C:\Users\SAM2\Desktop\_output\EbayDescripion_html_\ImagesOFFLINE\__PNGoffline_IMAGE2__2020030917145923baa7c98b8fecea26a404abaed0dea58a_big.png" style="width: 100%; height: 100%; object-fit: contain;" alt="Gigabyte 1650 SUPER WINDFORCE OC 4G GPU"><!-- !old: <img src="https://static.gigabyte.com/Product/3/7126/2020030917145923baa7c98b8fecea26a404abaed0dea58a_big.png" width="500" height="400" alt=""> ..`alt="GeForce® GTX 1650 SUPER™ WINDFORCE OC 4G"` -->
+			</div>
+
+
+		</div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S02__DIV__" id="__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqE5__DIV__">
+		<!-- $TAGqB1: sclice 1. -->
+
+
+			<!-- !note| 
+
+				<div class="__CSSfont__GLOBALalign_L__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S05_T__DIV__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_R__DIV__">
+					<font class="__CSSfont__H1c__ __CSSswatch_W2f__">WHAT TO EXPECT!</font>
+				</div>
+
+			-->
+
+			<div class="__CSSfont__GLOBALalign_L__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_R__DIV__"> <!-- !old| __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_R__DIV__ -->
+
+				<!-- block: body text -->
+				<!-- \n DUMMY to force, a line break. --><font class="__CSSfont__LN1d__"></font>
+				<br><!-- o BULLET --><div class="__CSSfont__B1d__"><div class="circleBase __CSSfont__B2d__ __CSSswatch_C3bg__ __CSSswatch_C3f__ __CSSswatch_B1border__"></div></div>
+					<font class="__CSSfont__T1d__ __CSSswatch_B2f__">The Gigabyte 1650 SUPER WINDFORCE OC 4G GPU</font>
+				<br><font class="__CSSfont__T2d__ __CSSswatch_W3f__">Features:</font>
+				<br><font class="__CSSfont__T3d__ __CSSswatch_W2f__">&#8226; A 30Mhz auto OC boost over it's reference card.</font>
+				<br><font class="__CSSfont__T3d__ __CSSswatch_W2f__">&#8226; 4GBs of GDDR6 memory.</font>
+				<br><font class="__CSSfont__T3d__ __CSSswatch_W2f__">&#8226; A stylish protection back plate.</font>
+				<br><font class="__CSSfont__T3d__ __CSSswatch_W2f__">&#8226; The fans have semi-passive cooling, so they will stop spinning when the GPU is under a light load.</font>
+				<br><font class="__CSSfont__T3d__ __CSSswatch_W2f__">&#8226; supports Aorus Engine which allows for full control of the voltage, clock speeds, and fan performance.</font>
+				<br>
+
+				<!-- !oldcode|
+					<font class="__CSSfont__T1c__ __CSSswatch_W3f__">
+						<br>The Gigabyte 1650 SUPER WINDFORCE OC 4G GPU Features:
+						<br>&nbsp;A 30Mhz auto OC boost over it's reference card.
+						<br>&nbsp;4GBs of GDDR6 memory.
+						<br>&nbsp;A stylish protection back plate.
+						<br>&nbsp;The fans have semi-passive cooling, so they will stop spinning when the GPU is under a light load.
+						<br>&nbsp;supports Aorus Engine which allows for full control of the voltage, clock speeds, and fan performance.
+					</font>
+				-->
+
+			</div>
+
+
+		</div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__"></div>
+
+
+		<!-- THIS SECTION HERE FOR THE IMAGES.. START!! .sam -->
+		<!-- 
+		KEEP! diagram: ...continued. IMAGE1
+			[--][E4][E4][E4]|[E5][E5][E5][--] image2
+		-->
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__COL_T2_S0__DIV__"></div>
+
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__"><!-- dummy1 --></div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S04__DIV__" id="__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqE4__DIV__">
+		<!-- $TAGqF1: sclice 1. -->
+
+
+			<!-- block: body image -->
+			<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S00_R__DIV__">
+				<!-- ! important, finish up!| __CSSfont__T1c__.. this is the body content BUT IT IS ACTUALY MORE LIKE A HEADER, LIKE A HEADER IMAGE, but it is an image so it will needs a border applied instead of a font color style tag class. -->
+				<img src="https://shop.westerndigital.com/content/dam/store/en-us/assets/products/internal-storage/wd-blue-sn550-nvme-ssd/gallery/WD_Blue_SN550_SSD_angle.png.thumb.1280.1280.png" style="width: 100%; height: 100%; object-fit: contain;" alt="Gigabyte 1650 SUPER WINDFORCE OC 4G GPU"><!-- !old: <img src="https://static.gigabyte.com/Product/3/7126/2020030917145923baa7c98b8fecea26a404abaed0dea58a_big.png" width="500" height="400" alt=""> ..`alt="GeForce® GTX 1650 SUPER™ WINDFORCE OC 4G"` -->
+			</div>
+
+
+		</div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S02__DIV__" id="__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqE5__DIV__">
+		<!-- $TAGqB1: sclice 1. -->
+
+
+			<!-- block: body text -->
+			<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_R__DIV__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_R__DIV__">
+
+				<!-- block: body text -->
+				<!-- \n DUMMY to force, a line break. --><font class="__CSSfont__LN1d__"></font>
+				<br><!-- o BULLET --><div class="__CSSfont__B1d__"><div class="circleBase __CSSfont__B2d__ __CSSswatch_C3bg__ __CSSswatch_C3f__ __CSSswatch_B1border__"></div></div>
+					<font class="__CSSfont__T1d__ __CSSswatch_B2f__">WD Blue 3D NAND Internal M.2. SSD</font>
+				<br><font class="__CSSfont__T2d__ __CSSswatch_W3f__">Features:</font>
+				<br><font class="__CSSfont__T3d__ __CSSswatch_W2f__">&#8226; read speeds up to 560 MB/s and sequential write speeds are up to 530 MB/s</font>
+				<br><font class="__CSSfont__T3d__ __CSSswatch_W2f__">&#8226; very reliable memory, means it the memory failure will happen less than a regular ssd</font>
+				<br><font class="__CSSfont__T3d__ __CSSswatch_W2f__">&#8226; 3D NAND technology </font>
+				<br><font class="__CSSfont__T3d__ __CSSswatch_W2f__">&#8226; Perfect for high usage applications like gaming, HD media playpack, and especially creative software.</font>
+				<br>
+
+				<!-- !oldcode|
+					<font class="__CSSfont__T1c__ __CSSswatch_W3f__">
+						<br>WD Blue 3D NAND Internal M.2. SSD
+						<br>&nbsp;read speeds up to 560 MB/s and sequential write speeds are up to 530 MB/s
+						<br>&nbsp;very reliable memory, means it the memory failure will happen less than a regular ssd
+						<br>&nbsp;3D NAND technology 
+						<br>&nbsp;Perfect for high usage applications like gaming, HD media playpack, and especially creative software.
+					</font>
+				-->
+
+			</div>
+
+
+		</div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__"></div>
+		<!-- THIS SECTION HERE FOR THE IMAGES.. END!! -->
+
+		<!-- spacer... -->
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__COL_T2_S0__DIV__"></div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S08__DIV__" id="__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqF1__DIV__">
+			<div class="__CSSfont__GLOBALalign_L__">
+				<font class="__CSSfont__T1c__ __CSSswatch_W2f__" style=""><br>&nbsp;</font>
+			</div>
+		</div>
+		<!-- } _CODESECTION  `#TAGv2: the page suported technolagies stuff.`. #end -->
+
+
+
+		<!-- { _CODESECTION  `#TAGv2: the shiping informayion needs to go here`. #start
+		KEEP! diagram:
+			dummy1     TAGqD1          dummy8
+			|         |                     |
+			V         V                     v
+			[--][D1][D1][D1]|[D1][D1][D1][--] header| the shipping information
+			... 
+			header
+			+ __CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__
+			+ __CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S06__DIV__
+			+ __CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__
+		-->
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__COL_T2_S0__DIV__"></div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__"><!-- dummy1 --></div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S06__DIV__" id="__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqE1__DIV__">
+
+			<!-- block: head title -->
+			<div class="__CSSfont__GLOBALalign_L__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_T__DIV__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_R__DIV__">
+				<font class="__CSSfont__H1c__ __CSSswatch_W2f__">SHIPPING INFORMATION</font>
+			</div>
+			<div class="__CSSfont__GLOBALalign_L__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_R__DIV__">
+				<font class="__CSSfont__H2c__ __CSSswatch_W2f__">GOES|</font>
+				<font class="__CSSfont__H3c__ __CSSswatch_C3f__">HERE</font>
+			</div>
+
+			<!-- block: body text -->
+			<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_R__DIV__">
+
+				<font class="__CSSfont__T1c__ __CSSswatch_W2f__">
+					<br>&nbsp;
+					<br>+ Eghh, shipping information HERE.
+					<br>&nbsp;
+				</font>
+
+			</div>
+
+		</div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__"><!-- dummy8 --></div>
+		<!-- spacer... -->
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__COL_T2_S0__DIV__"></div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S08__DIV__" id="__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqF1__DIV__">
+			<div class="__CSSfont__GLOBALalign_L__">
+				<font class="__CSSfont__T1c__ __CSSswatch_W2f__" style=""><br>&nbsp;</font>
+			</div>
+		</div>
+		<!-- } _CODESECTION  `#TAGv2: the shiping informayion needs to go here`. #end -->
+
+
+		<!-- { _CODESECTION  `#TAGv2: the page footer, with the company logo and shit needs to go here`. #start
+		KEEP! diagram:
+			dummy1     TAGqD1          dummy8
+			|         |                     |
+			V         V                     v
+			[--][D1][D1][D1]|[D1][D1][D1][--] header| the page footer
+			... 
+			header
+			+ __CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__
+			+ __CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S06__DIV__
+			+ __CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__
+		-->
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__COL_T2_S0__DIV__"></div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__"><!-- dummy1 --></div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S06__DIV__" id="__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqE1__DIV__">
+
+			<!-- block: head title -->
+			<!--
+			<div class="__CSSfont__GLOBALalign_L__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_T__DIV__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_R__DIV__">
+				<font class="__CSSfont__H1c__ __CSSswatch_W2f__">THE PAGE FOOTER</font>
+			</div>
+			<div class="__CSSfont__GLOBALalign_L__ __CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_R__DIV__">
+				<font class="__CSSfont__H2c__ __CSSswatch_W2f__">GOES|</font>
+				<font class="__CSSfont__H3c__ __CSSswatch_C3f__">HERE</font>
+			</div>
+			-->
+
+			<!-- block: body text -->
+			<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__GUT_T08_S01_R__DIV__">
+
+				<font class="__CSSfont__T1c__ __CSSswatch_W2f__">
+					<!-- 
+					<br>&nbsp;
+					<br>+ Eghh, page footer HERE.
+					<br>&nbsp;
+					-->
+					© 2020 SSC Computers, LLC
+				</font>
+
+			</div>
+
+		</div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S01__DIV__"><!-- dummy8 --></div>
+		<!-- spacer... -->
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__COL_T2_S0__DIV__"></div>
+		<div class="__CSSatr__TheEbayDescMAINWRAP__BLOCK__ROW_T08_S08__DIV__" id="__CSSatr__TheEbayDescMAINWRAP__HEAD__TAGqF1__DIV__">
+			<div class="__CSSfont__GLOBALalign_L__">
+				<font class="__CSSfont__T1c__ __CSSswatch_W2f__" style=""><br>&nbsp;</font>
+			</div>
+		</div>
+		<!-- } _CODESECTION  `#TAGv2: the page footer, with the company logo and shit needs to go here`. #end -->
+
+
+
+	</body>
+
+</html>
+
